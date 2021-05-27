@@ -35,7 +35,7 @@ class AccountViewSet(viewsets.ViewSet):
         return Response({'success' : True})
 
     @action(methods = ['POST'], detail = False)
-    def login(selfself, request):
+    def login(self, request):
         serializer = LoginSerializer(data = request.data)
         if not serializer.is_valid():
             return Response({
